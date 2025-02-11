@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000 url(../banner.jpg);
+}
+.detection-form {
+  padding-top: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+background: #000 url(../bg2.png);
+}
+
+.intro-content h1,
+.intro-content h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #1b2e35;
+}
+.intro-content span {
+  color: #000;
+  font-size: 1.2em;
+  font-family: "Cinzel", serif;
+  font-weight: 800;
+}
+.intro-content .btn {
+  display: inline-block;
+  padding: 15px 50px;
+  font-size: 18px;
+  border-radius: 0;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.output {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: brown;
+}
+.intro-content p {
+  font-weight: 600;
+  color: #1b2e35;
+  margin-bottom: 30px;
+}
+.det-box h2 {
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #014b54;
+}
+.goback {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}

@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+/* .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+} */
+
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff url(../images/banner.jpg) no-repeat center top;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+.intro::after {
+  content: "";
+  background: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.intro-content {
+  position: relative;
+  z-index: 99;
+}
+.detection-form {
+  padding-top: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.intro-content h1,
+.intro-content h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.intro-content h3 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #FF0000;
+}
+.intro-content span {
+  color: white;
+  font-size: 1.3em;
+}
+.intro-content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.output {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: brown;
+}
+.intro-content p {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 30px;
+}
+.det-box h2 {
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #014b54;
+}
+.goback {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
