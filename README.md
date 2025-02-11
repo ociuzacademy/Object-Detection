@@ -1,4 +1,4 @@
-# Harmful Object Detection using Webapp using Deep Learning and HTML-Flask.
+# Harmful Object Detection Webapp using Deep Learning and HTML-Flask.
 
 
 ![test1](https://github.com/user-attachments/assets/69a88143-2a8f-47b1-8895-b65efa222024)
