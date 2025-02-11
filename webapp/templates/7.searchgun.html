@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI SURVEILLANCE</title>
+  <link rel="icon" href="../static/images/logo.png" type="image/png"> <!-- Replace with your favicon URL -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #eaf7ff; /* Light blue background */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #007acc; /* Deeper blue for contrast */
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    input[type="file"] {
+      font-size: 1rem;
+      font-family: inherit;
+      color: #007acc;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #007acc;
+      border-radius: 8px;
+      background-color: white;
+      cursor: pointer;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    input[type="file"]:hover {
+      background-color: #f0faff;
+      border-color: #005f99;
+    }
+
+    button {
+      background-color: #007acc;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #005f99; /* Slightly darker blue on hover */
+      transform: scale(1.05);
+    }
+
+    button:active {
+      background-color: #004d80;
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+
+
+<h1>AI SURVEILLANCE - Search Gun</h1>
+<p>Please upload the test video </p>
+  <div class="container">
+
+<form action="{{ url_for('process_gun') }}" method="post" enctype="multipart/form-data">
+    <input type="file" accept="video/*" name="file">
+    <button type="submit">Search</button>
+</form>
+
+  </div>
+</body>
+</html>

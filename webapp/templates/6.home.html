@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="../static/images/logo.png" type="image/x-icon" /> 
+    <title>AI SURVEILLANCE</title>
+
+
+
+
+ <style>
+        body {
+            background: linear-gradient(to right, #b3e0ff, #80c1ff); /* Light blue gradient */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            display: inline-block;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 900px; /* Ensure it doesn't exceed the viewport */
+            margin: 20px 0;
+        }
+
+        h1 {
+            color: #004080;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px; /* Round the edges */
+        }
+
+        .sidebar-left, .sidebar-right {
+            width: 100%;
+            max-width: 300px;
+            background-color: #f0f8ff; /* Light background for analytics */
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+            margin: 10px;
+        }
+
+        .sidebar-left h2, .sidebar-right h2 {
+            color: #004080;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 150px; /* Adjust the width */
+            height: auto;
+        }
+
+        .dashboard {
+            height: auto;
+            background-color: #d0e7ff; /* Light blue for widgets */
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .fps-display {
+            color: #004080;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #0066cc;
+        }
+
+        @media (min-width: 600px) {
+            body {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .sidebar-left {
+                margin-right: 20px;
+            }
+
+            .sidebar-right {
+                margin-left: 20px;
+            }
+
+            .container {
+                width: calc(100% - 40px); /* Adjust width to fit with sidebars */
+            }
+        }
+    </style>
+
+
+
+
+    
+
+</head>
+
+<body>
+    <div class="sidebar-left">
+        <img src="../static/images/logo2.gif" alt="Logo" class="logo">
+        <h2>Analytics Dashboard</h2>
+        <div class="dashboard">
+            <p>Search</p>
+            <p>for harmful objects in video</p>
+        </div>
+        <div class="dashboard">
+            <p>Search</p>
+            <p>for a specific object</p>
+        </div>
+        <div class="dashboard">
+            <p>Search</p>
+            <p>for Gun, Knife, etc</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>AI SURVEILLANCE</h1>
+        <img src="{{ url_for('video_feed') }}" alt="Webcam Feed" />
+        <!-- <div class="overlay-text">DeepRehab</div> -->
+        
+    </div>
+
+ 
+
+
+<div class="sidebar-right">
+<h2>Menu</h2>
+
+<!-- Buttons -->
+<form action="{{ url_for('search')}}"method="post">
+<button>&#128269; Search</button>
+</form>
+
+
+<form action="{{ url_for('searchgun')}}"method="post">
+<button>&#128299; Find Gun</button>
+</form>
+
+
+<form action="{{ url_for('searchhammer')}}"method="post">
+<button>&#128296; Find Hammer</button>
+</form>
+
+
+<form action="{{ url_for('searchsmoke')}}"method="post">
+<button>&#128173; Find Smoke</button>
+</form>
+
+
+<form action="{{ url_for('searchfire')}}"method="post">
+<button>&#128293; Find Fire</button>
+</form>
+
+
+<form action="{{ url_for('searchknife')}}"method="post">
+<button>&#x1F5E1; Find Knife</button>
+</form>
+
+</div>
+
+
+
+</body>
+
+</html>
